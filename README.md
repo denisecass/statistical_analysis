@@ -31,4 +31,25 @@ You'll end up creating six (6) box plots, two for each dataset. Remember that wh
 
 # Inferential Statistics
 
+Q1.Using the three datasets in the Data Repository Tab (Raw, Rolling Mean (30 Minutes), Rolling Standard Deviation (30 Minutes)), create three separate correlation heatmaps. This can be completed using the Data-Analysis Add-In and selecting 'Correlation'. What do you observe about the correlations when focusing specifically on the 'Pump Failure (1 or 0)' Row? Note: It may be helpful to apply conditional formatting to make the correlation scores easier to interpret! (i.e. The closer to 1 is green, the closer to -1 is red)
 
+- The Volumetric Flow Meters (1 and 2) and the Pump Efficiency categories appear to show the lowest values in regards to Pump Failure, indicating a possible correlation between low volumetric flow measurements and pump failure. 
+
+Q6. For each of the three Correlation Heatmaps you have created, create THREE Column Charts using the Pump Failure (1 or 0) data (Row 23) and order this in descending order. 
+
+- Looking at all three of our correlation heat-maps and associated correlation column plots, it is apparent that one of our three data-sets happens to show variables which are closely correlated with Pump Failure. (The Rolling Standard Deviation Dataset). However, this doesn't mean that our other datasets and correlations are not informative. The concept we are reinforcing here is that when looking at analysing time series data and events of interest, we should pay particularly strong attention towards variables which exhibit the largest degree of statistical variance. For example, we might note that a rapid increase in the Standard Deviation, seems to be a good indicator of failure.  
+
+
+Q7. Using the Data Preparation Tab, create a multivariate linear regression. As you look at the Summary Output from the Linear Regression Model - what does the R Squared Value tell you about your model? What about the P-Value? Similar to what you had done with the correlation analysis in Q5, you just need to select 'Regression' from the Data Analysis Tab and put in the respective dependent and independent variables you wish to explore!
+
+- Since the R-Squared value is below 0.4, it shows a very low level of correlation; whereas the P-values fluxuate dramatically, showing varying degrees of high correlation (Volumetric Flow Meters 1 & 2, Pump Temperature, etc.) and low correlation (Pump Speed, Pump Torque, etc.) depending on the variable being evaluated. 
+
+Q8. Create the Multivariate Regression Equation Values for each row using the Regression Coefficients you have calculated in Q7. From your output, this will become the Statistical Alarm Signal that the Engineers will observe in the future for abnormalities. Place each co-efficient that you have calculated in the table titled 'Co-Efficients (Taken from the Summary Output Tab created when you calculate the Multivariate Regression)' in the Data Preparation Tab. What do you notice when you've completed your Multivariate Equation Plot? 
+
+- There are fairly consistent and only slightly fluctuating measurements for the majority of the values. However there is a huge spike towards the end of the data set with the Pump Efficiency and Regressive Equation variables, and a smaller but still noticeable spike in the other variables as well, thus showing a possible correlation between Pump Efficiency and Pump Failure.
+
+Q9. Revisiting the Regression Coefficients you have calculated in Q7, create a Column Chart that shows in descending order, each variables Regression Coefficient. Having completed this - what does this tell you about the variables that have the largest absolute impact towards Pump Failure? Additionally, how is this regression coefficient different from the correlation coefficient?
+
+- Pump Speed, Pump Efficiency, and Pump Torque appear to have the strongest impact on Pump Failure. The regression coefficient shows how one variable affects another variable in a data set, whereas the correlation coefficient measures the numerical amount or linear relationship between two (or more) variables in a data set such as x and y. 
+
+**Well done! We've managed to create a Statistical Alarm that the Engineers can look at and use to identify potential Pump Failure for the Surjek Asset!**
